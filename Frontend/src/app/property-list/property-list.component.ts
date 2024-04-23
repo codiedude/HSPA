@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './property-list.component.css'
 })
 export class PropertyListComponent {
-  Property:Array <any>=[
+  properties:Array <any>=[
     {
        "Id":1,
        "Name":"Birla House",
@@ -36,7 +36,14 @@ export class PropertyListComponent {
     }
     ,
     {
-       "Id":3,
+      "Id":5,
+       "Name":"Perl White",
+       "Type":"House",
+       "Price":15666 
+      }
+      ,
+      {
+        "Id":6,
        "Name":"Perl White",
        "Type":"House",
        "Price":15666
