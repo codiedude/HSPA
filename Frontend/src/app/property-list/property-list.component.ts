@@ -1,52 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HousingService } from '../services/housing.service';
+import { IProperty } from './iProperty.interface';
 
 @Component({
   selector: 'app-property-list',
   templateUrl: './property-list.component.html',
   styleUrl: './property-list.component.css'
 })
-export class PropertyListComponent {
-  properties:Array <any>=[
-    {
-       "Id":1,
-       "Name":"Birla House",
-       "Type":"House",
-       "Price":12000
+export class PropertyListComponent implements OnInit {
+  properties: Array<IProperty>;
+  constructor(private hosuingService:HousingService) { }
 
-    },
-{
-   "Id":2,
-   "Name":"Erose villa",
-   "Type":"House",
-   "Price":13000
+  ngOnInit(): void { 
+    this.hosuingService.getAllProperties().subscribe
+    (
+      data => {
+            this.properties = data;
+            console.log(data);
+          },error=>{
+            console.log('httperror:');
+            console.log(error);
+          }
+    )
+    // this.http.get('data/properties.json').subscribe
+    // (
+    //   data=>{
+    //     this.properties=data;
+        
+    //   }
+    // );
 
-},
-{
-   "Id":3,
-   "Name":"NacroHome",
-   "Type":"House",
-   "Price":15666
-  }
-  ,
-  {
-     "Id":4,
-     "Name":"PerlHome",
-     "Type":"House",
-     "Price":15666
-    }
-    ,
-    {
-      "Id":5,
-       "Name":"Perl White",
-       "Type":"House",
-       "Price":15666 
-      }
-      ,
-      {
-        "Id":6,
-       "Name":"Perl White",
-       "Type":"House",
-       "Price":15666
-      }
-  ]
+}
 }

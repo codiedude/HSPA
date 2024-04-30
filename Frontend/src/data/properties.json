@@ -1,0 +1,44 @@
+[
+    {
+       "Id":1,
+       "Name":"Birla House",
+       "Type":"House",
+       "Price":12000
+
+    },
+{
+   "Id":2,
+   "Name":"Erose villa",
+   "Type":"House",
+   "Price":13000
+
+},
+{
+   "Id":3,
+   "Name":"NacroHome",
+   "Type":"House",
+   "Price":15666
+  }
+  ,
+  {
+     "Id":4,
+     "Name":"PerlHome",
+     "Type":"House",
+     "Price":15666
+    }
+    ,
+    {
+      "Id":5,
+       "Name":"Perl White",
+       "Type":"House",
+       "Price":15666 
+      }
+      ,
+      {
+        "Id":6,
+       "Name":"Perl White",
+       "Type":"House",
+       "Price":15666
+      }
+  ]
+
